@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+Form Validations
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+What is "FORM" in HTML
+->The HTML Forms can be used to collect the data from the user
+->The HTML form element can be used to create HTML forms. It is a "CONTAINER" that can contain different types of Input elements like Text Fields, Checkboxes, etc
+->In Form has "type - submit" wheneven we click a button or press Enter key while editing any input field in the form, the submit event will be triggered.
+->The preventDefault() method prevents the occurrence of default action. onSubmit event on FORM Container
+->A Form Event is an event that can occur within a form.
+->Some of the form events are:
+                              blur
+                              focus
+                              change
+                              submit, etc.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+Topics i clearly understood
+(1.)setFormData((prev)=>{...prev,[name]:value})
+Mistake
+The problem is the incorrect usage of curly braces {}. In JavaScript:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Curly braces {} in an arrow function body indicate a block of code, not an object literal.
+When using { ...prev, [name]: value } directly, JavaScript needs you to wrap it in parentheses to treat it as an object literal.
+Correct Syntax:
+setFormData((prev) => ({ ...prev, [name]: value }));
