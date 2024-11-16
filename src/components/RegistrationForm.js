@@ -76,7 +76,7 @@ const RegistrationForm = () => {
                 {errors.password && (<p className='text-red-600 text-sm mt-1'>{errors.password}</p>)}
               </div>
               <button type="submit" className={`w-full h-10 rounded text-white ${isSubmitting ?"bg-gray-500 cursor-not-allowed":"bg-blue-500 hover:bg-blue-600"}` }>
-                {isSubmitting?"Registed":"Submit"}</button>
+                {isSubmitting? "Submitting..." : "Register"}</button>
           </form>
            
         </div>
